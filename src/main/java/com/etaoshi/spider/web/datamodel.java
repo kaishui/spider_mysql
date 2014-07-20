@@ -177,7 +177,7 @@ public class datamodel {
 		int end = page * pagecount;
 		
 		Map<String,String> params = new HashMap<String,String>();
-		String sql = "select * from " + SQLParamHelper.Replace(tablename) + " limit " + start + "," + end;
+		String sql = "select * from " + SQLParamHelper.Replace(tablename) + " order by id desc limit " + start + "," + end;
 		List list = scservice.getDynamicTable(sql);
 		
 		// 分页控件赋值 
