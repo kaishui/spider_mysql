@@ -173,6 +173,8 @@ public class datamodel {
 		int pagecount = 20;
 		if(page == null)
 			page = 1;
+		if(page <= 0)
+			page = 1;
 		int start = (page - 1) * pagecount;
 		int end = page * pagecount;
 		
